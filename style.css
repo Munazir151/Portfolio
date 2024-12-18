@@ -9,12 +9,11 @@ body {
 
 .desktop {
   position: relative;
-  width: 100%;
-  max-width: 1500px;
+  width: 1500px;
   margin: 0 auto;
   background-color: #151925;
   overflow: hidden;
-  padding: 20px;
+ padding: 20px;
 }
 
 .desktop .text-wrapper,
@@ -72,38 +71,7 @@ img {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .desktop {
-    padding: 10px;
-  }
 
-  .desktop .text-wrapper,
-  .desktop .text-wrapper-2,
-  .desktop .text-wrapper-3,
-  .desktop .text-wrapper-4,
-  .desktop .text-wrapper-5,
-  .desktop .text-wrapper-6,
-  .desktop .text-wrapper-7,
-  .desktop .text-wrapper-8,
-  .desktop .text-wrapper-9,
-  .desktop .text-wrapper-10,
-  .desktop .text-wrapper-11,
-  .desktop .text-wrapper-12,
-  .desktop .text-wrapper-13,
-  .desktop .text-wrapper-18 {
-    font-size: 18px;
-  }
-
-  .desktop .calculator,
-  .desktop .headphone,
-  .desktop .weather,
-  .desktop .screenshot,
-  .desktop .screenshot-2,
-  .desktop .food {
-    width: 100%;
-    height: auto;
-  }
-}
 
 .desktop {
     position: relative;
@@ -253,7 +221,7 @@ img {
     position: absolute;
     top: 140px;
     left: 35px;
-    -webkit-text-stroke: 3px #000000;
+    
     font-family: "Inter-Black", Helvetica;
     font-weight: 900;
     color: #ffffff;
@@ -293,7 +261,7 @@ img {
   }
   
   .desktop .p {
-    position: absolute;
+    position: relative;
     width: 655px;
     top: 252px;
     left: 38px;
@@ -1001,70 +969,116 @@ html {
   top: 544px;
   left: 38px; /* Align with other content */
 }
+/* Footer Styles */
+/* Footer Styles */
+.footer {
+  width: 97.84%;
+  padding: 30px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
 
-/* Add responsive styles */
-@media screen and (max-width: 1200px) {
-  .desktop {
-    padding: 0 20px;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-info,
+.about-me {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.footer a {
+  color: #00e9ff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 90px;
+  padding-right: 90px;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  margin: 20px;
+  margin-right: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 40px;
+}
+
+.social-icon {
+  color: #00e9ff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .desktop .ellipse {
-    width: 50%;
-    height: auto;
+
+  .contact-info,
+  .about-me {
+    padding: 10px;
   }
-  
-  .desktop .p {
-    width: 90%;
+
+  .footer h2 {
     font-size: 20px;
   }
-}
 
-@media screen and (max-width: 768px) {
-  .desktop .overlap-group {
+  .footer p {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
     flex-direction: column;
-  }
-
-  .desktop .text-wrapper-4 {
-    font-size: 36px;
-  }
-
-  .desktop .and-i-m-a-frontend {
-    width: 100%;
-    font-size: 24px;
-  }
-
-  .desktop .social {
-    position: relative;
-    top: 20px;
-    left: 0;
-    margin-bottom: 40px;
-  }
-
-  .desktop .ellipse {
-    display: none;
-  }
-
-  .desktop .services-2,
-  .desktop .projects,
-  .desktop .contact-2 {
-    width: 100%;
-    padding: 20px;
+    gap: 10px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .desktop .text-wrapper-4 {
-    font-size: 28px;
-  }
-
-  .desktop .social-icon {
-    width: 45px;
-    height: 45px;
+@media screen and (max-width: 400px) {
+  .footer h2 {
     font-size: 18px;
   }
 
-  .desktop .p {
-    font-size: 16px;
-    line-height: 1.6;
+  .footer p {
+    font-size: 12px;
+  }
+
+  .social-icon {
+    font-size: 20px;
   }
 }
