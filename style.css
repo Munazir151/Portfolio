@@ -1,3 +1,47 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter-Regular', Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #151925;
+  overflow-x: hidden;
+}
+
+.desktop {
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #151925;
+  padding: 20px;
+}
+
+/* Container constraints */
+.overlap,
+.overlap-group,
+.overlap-4,
+.services-2,
+.projects,
+.contact-2,
+.footer {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Image constraints */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Update CSS */
 body {
   font-family: 'Inter-Regular', Helvetica, sans-serif;
@@ -994,7 +1038,8 @@ html {
 /* Footer Styles */
 .footer {
   width: 100%;
-  max-width:1500px;
+  max-width: 1500px;
+  position: relative;
   background-color: #151925;
   color: #ffffff;
   border-top: 1px solid rgba(0, 233, 255, 0.1);
@@ -1002,7 +1047,7 @@ html {
 }
 
 .footer-content {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
