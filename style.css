@@ -1064,7 +1064,7 @@ html {
 .footer-bottom p {
   margin: 0;
   font-weight: 500;
-  display: inline;
+  display: inline-block;
 }
 
 .social-icons {
