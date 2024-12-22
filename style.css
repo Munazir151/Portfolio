@@ -994,6 +994,7 @@ html {
 /* Footer Styles */
 .footer {
   width: 100%;
+  max-width:1500px;
   background-color: #151925;
   color: #ffffff;
   border-top: 1px solid rgba(0, 233, 255, 0.1);
