@@ -1116,10 +1116,6 @@ html {
   box-shadow: 0 5px 15px rgba(0, 233, 255, 0.3);
 }
 
-/* Add to prevent zooming on mobile */
-* {
-  touch-action: manipulation;
-}
 
 /* Responsive Footer */
 @media screen and (max-width: 768px) {
