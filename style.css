@@ -3,7 +3,7 @@ body {
   font-family: 'Inter-Regular', Helvetica, sans-serif;
   color: #333;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   min-width: 1500px; /* Force minimum width */
   overflow-x: auto; /* Allow horizontal scroll if needed */
