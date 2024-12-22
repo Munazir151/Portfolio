@@ -162,28 +162,28 @@
         </div>
       </div>
       <div class="contact-2">
-        <form action="">
-          <p class="contact-me">
-            <span class="text-wrapper-8">Contact </span>
-            <span class="text-wrapper-9"> Me!</span>
-          </p>
+        <p class="contact-me">
+          <span class="text-wrapper-8">Contact </span>
+          <span class="text-wrapper-9"> Me!</span>
+        </p>
+        <form action="mailto:munazir9741@gmail.com" method="POST" enctype="text/plain" id="contactForm">
           <div class="frame-2">
-            <input type="text" placeholder="First Name" style="padding: 10px;" />
+            <input type="text" name="firstName" placeholder="First Name" required />
           </div>
           <div class="frame-3">
-            <input type="number" placeholder="Mobile Number" style="padding: 10px;" />
+            <input type="number" name="phone" placeholder="Mobile Number" required />
           </div>
           <div class="frame-4">
-            <input type="email" placeholder="E-mail Adress" style="padding: 10px;" />
+            <input type="email" name="email" placeholder="E-mail Address" required />
           </div>
           <div class="frame-5">
-            <input type="name" placeholder="Last name" style="padding: 10px;" />
+            <input type="text" name="lastName" placeholder="Last Name" required />
           </div>
           <div class="frame-6">
-            <input type="text" placeholder="Message" />
+            <textarea name="message" placeholder="Message" required></textarea>
           </div>
           <div class="frame-7">
-            <button>Submit</button>
+            <button type="submit">Submit</button>
           </div>
         </form>
       </div>
@@ -221,5 +221,20 @@
         </div>
       </div>
     </div>
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const mailtoLink = `mailto:munazir9741@gmail.com?subject=Contact Form Submission&body=
+          First Name: ${formData.get('firstName')}%0D%0A
+          Last Name: ${formData.get('lastName')}%0D%0A
+          Phone: ${formData.get('phone')}%0D%0A
+          Email: ${formData.get('email')}%0D%0A
+          Message: ${formData.get('message')}`;
+      
+        window.location.href = mailtoLink;
+      });
+    </script>
   </body>
 </html>
