@@ -817,22 +817,49 @@ img {
     line-height: normal;
     white-space: nowrap;
   }
-  .desktop  .frame-7 {
-    margin-top: 710px;
-    margin-left: 450px;
-    
-  }
-  .desktop  .frame-7 button{
-    width: 250px;
-    height: 60px;
-    background-color: #00e9ff;
-    font-weight: 800;
-    font-family: "Inter-ExtraBold", Helvetica;
-    font-size: 32px;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
+
+/* Update frame-6 styles */
+.desktop .frame-6 textarea {
+  position: absolute;
+  width: 850px;
+  height: 290px;
+  top: 369px; /* Adjust this value to move textarea down */
+  left: 134px;
+  background-color: #323846;
+  border: 0;
+  color: #ffffff;
+  font-family: "Inter-ExtraBold", Helvetica;
+  font-weight: 800;
+  font-size: 24px;
+  padding: 15px;
+  resize: none;
+}
+
+/* Update frame-7 button positioning */
+.desktop .frame-7 {
+  position: absolute;
+  top: 750px; /* Adjust based on textarea position */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.desktop .frame-7 button {
+  width: 250px;
+  height: 60px;
+  background-color: #00e9ff;
+  font-weight: 800;
+  font-family: "Inter-ExtraBold", Helvetica;
+  font-size: 32px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.desktop .frame-7 button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 233, 255, 0.3);
+}
+
   .aboutme {
     position: relative;
     width: 1467px;
