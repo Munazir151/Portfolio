@@ -1,10 +1,12 @@
-/* Improve Typography and Spacing */
+/* Update CSS */
 body {
   font-family: 'Inter-Regular', Helvetica, sans-serif;
   color: #333;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  min-width: 1500px; /* Force minimum width */
+  overflow-x: auto; /* Allow horizontal scroll if needed */
 }
 
 .desktop {
@@ -13,7 +15,7 @@ body {
   margin: 0 auto;
   background-color: #151925;
   overflow: hidden;
- padding: 20px;
+  padding: 20px;
 }
 
 .desktop .text-wrapper,
@@ -149,7 +151,6 @@ img {
     line-height: normal;
   }
  
-  
   .desktop .services {
     position: absolute;
     width: 139px;
@@ -470,7 +471,6 @@ img {
     left: 1237px;
   }
   
-  
   .desktop .about-2 {
     position: absolute;
     width: 1440px;
@@ -750,8 +750,6 @@ img {
     
   }
   
-
-  
   .desktop .frame-3 input{
     position: absolute;
     width: 401px;
@@ -769,7 +767,6 @@ img {
     white-space: nowrap;
   }
  
-  
   .desktop .frame-4 input {
     position: absolute;
     width: 401px;
@@ -786,7 +783,6 @@ img {
     line-height: normal;
     white-space: nowrap;
   }
-  
   
   .desktop .frame-5 input{
     position: absolute;
@@ -805,7 +801,6 @@ img {
     white-space: nowrap;
   }
 
-  
   .desktop .frame-6 input{
     position: absolute;
     width: 850px;
@@ -942,7 +937,6 @@ img {
     line-height: normal;
   }
   
-  
   .desktop .text-wrapper-18 {
     position: absolute;
     width: 177px;
@@ -960,6 +954,7 @@ img {
 /* Add smooth scrolling */
 html {
   scroll-behavior: smooth;
+  overflow-x: auto;
 }
 
 /* Update social icons styles */
@@ -970,81 +965,108 @@ html {
   left: 38px; /* Align with other content */
 }
 /* Footer Styles */
-/* Footer Styles */
 .footer {
-  width: 97.84%;
-  padding: 30px;
-  background-color: black;
-  color: white;
-  text-align: center;
+  width: 100%;
+  background-color: #151925;
+  color: #ffffff;
+  border-top: 1px solid rgba(0, 233, 255, 0.1);
+  padding: 60px 0 20px;
 }
 
 .footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  max-width:1500px;
-  margin: 0 auto;
-  padding: 20px;
+  gap: 40px;
+  padding: 0 40px;
 }
 
 .contact-info,
 .about-me {
   flex: 1;
-  padding: 20px;
+  max-width: 600px;
 }
 
 .footer h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-family: "Inter-ExtraBold", Helvetica;
+  font-size: 28px;
+  color: #00e9ff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 3px;
+  background-color: #00e9ff;
 }
 
 .footer p {
   font-size: 16px;
-  margin: 5px 0;
+  line-height: 1.8;
+  margin: 12px 0;
+  color: #ffffff;
 }
 
 .footer a {
   color: #00e9ff;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .footer-bottom {
+  max-width: 1400px;
+  margin: 40px auto 0;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-  padding-left: 90px;
-  padding-right: 90px;
-  border-top: 1px solid #333;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom p {
-  margin: 20px;
-  margin-right: 20px;
+  margin: 0;
+  font-weight: 500;
+  display: inline;
 }
 
 .social-icons {
   display: flex;
-  gap: 40px;
+  gap: 20px;
 }
 
 .social-icon {
   color: #00e9ff;
-  font-size: 24px;
-  transition: color 0.3s;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #00e9ff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #ffffff;
+  color: #151925;
+  background-color: #00e9ff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 233, 255, 0.3);
 }
 
 /* Responsive Footer */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     align-items: center;
